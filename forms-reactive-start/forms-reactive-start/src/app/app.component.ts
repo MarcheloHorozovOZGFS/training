@@ -29,9 +29,9 @@ export class AppComponent implements OnInit{
       console.log(status)
     })
 
-    this.signupForm.setValue({
+    this.signupForm.patchValue({
       'userData' : {
-        'username' : 'Max',
+        'username' : 'Anna',
         'email' : 'max@test.com'
       },
       'gender' : 'male',
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit{
 
   onSubmit(){
     console.log(this.signupForm)
+    this.signupForm.reset();
   }
 
   onAddHobby(){
